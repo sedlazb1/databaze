@@ -7,7 +7,7 @@
   </head>
   <body><!--WZ-REKLAMA-1.0-->
 tady je reklamaaa takze stranka bude nekde jinde<br>
-<a href="k.php">TADY BUDE</a>
+<a href="show.php">TADY BUDE</a>
 
   </body>
 </html>

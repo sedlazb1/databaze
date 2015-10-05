@@ -200,8 +200,8 @@ VALUES ('','".$_POST['name']."','".$coords[0]."','".$coords[1]."','".$res[0]."',
         //zapis lupu do souboru
          
         if($_POST['action']=='mod' && $_POST['mod']=='rob'){
-          $soubor = fopen("a.txt", "r+");
-          $old = fread($soubor, filesize("a.txt"));
+          $soubor = fopen("lup.txt", "r+");
+          $old = fread($soubor, filesize("lup.txt"));
           $sur = explode(";", $old); 
           $ukr = $_POST['wood']+$_POST['vine']+$_POST['rock']+$_POST['glass']+$_POST['sira'];
           if($_POST['kdo']=='z'){
@@ -215,8 +215,8 @@ VALUES ('','".$_POST['name']."','".$coords[0]."','".$coords[1]."','".$res[0]."',
           fwrite($soubor, $new);
           fclose($soubor); 
         }
-        $f = fopen("a.txt", "r+");
-        $o = fread($f, filesize("a.txt"));
+        $f = fopen("lup.txt", "r+");
+        $o = fread($f, filesize("lup.txt"));
         $s = explode(";", $o);
         echo '<br>zbysek ukradl: '.round($s[0]/1000).'k, ondra: '.round($s[1]/1000).'k<br>';
         fclose($f);
@@ -282,9 +282,9 @@ VALUES ('','".$_POST['name']."','".$coords[0]."','".$coords[1]."','".$res[0]."',
     
     
             ?>     <br />    
-    <a href="k.php">back</a>
+    <a href="show.php">back</a>
     <br>      
-    <a href="b.php">sifrovani neceho</a>
+    <a href="calc.php">kalkulacka</a>
     <br>        
   </body>
 </html>
